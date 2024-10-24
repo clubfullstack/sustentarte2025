@@ -36,11 +36,17 @@
             margin-top: 0;
         }
 
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
         .button {
-            display: inline-block;
+            flex: 1 1 calc(33.333% - 10px);
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
+            padding: 10px;
             margin: 5px 0;
             border: none;
             border-radius: 5px;
@@ -48,6 +54,7 @@
             cursor: pointer;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            box-sizing: border-box;
         }
 
         .button:hover {
@@ -67,15 +74,6 @@
             border-radius: 8px;
         }
 
-        .links {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .links li {
-            margin-bottom: 10px;
-        }
-
         .info {
             text-align: center;
             font-size: 0.9em;
@@ -91,42 +89,42 @@
 
         <div class="card">
             <h2>Redes Sociais e Contatos</h2>
-            <ul class="links">
-                <li><a class="button" href="https://www.instagram.com/ecovilasustentar" target="_blank">Instagram</a></li>
-                <li><a class="button" href="https://www.ecovilasustentar.eco.br" target="_blank">Website</a></li>
-                <li><a class="button" href="mailto:ecovilasustentar@gmail.com">Email</a></li>
-                <li><a class="button" href="https://linktr.ee/ecovilasustentar" target="_blank">LinkTree</a></li>
-                <li><a class="button" href="https://www.facebook.com/sustentabilidade.integral" target="_blank">Facebook</a></li>
-                <li><a class="button" href="mailto:ecovilasustentar@gmail.com">Canvas</a></li>
-                <li><a class="button" href="https://www.ecovilasustentar.eco.br" target="_blank">Wix</a></li>
-                <li><a class="button" href="https://trello.com/invite/b/671a90e4e9e8d52b9987a3cc/ATTI90081682b23f494c86ed4ae2b18d492102463DDF/sustentarte-2025" target="_blank">Painel Trello</a></li>
-            </ul>
+            <div class="button-container">
+                <a class="button" href="https://www.instagram.com/ecovilasustentar" target="_blank">Instagram</a>
+                <a class="button" href="https://www.ecovilasustentar.eco.br" target="_blank">Website</a>
+                <a class="button" href="mailto:ecovilasustentar@gmail.com">Email</a>
+                <a class="button" href="https://linktr.ee/ecovilasustentar" target="_blank">LinkTree</a>
+                <a class="button" href="https://www.facebook.com/sustentabilidade.integral" target="_blank">Facebook</a>
+                <a class="button" href="mailto:ecovilasustentar@gmail.com">Canvas</a>
+                <a class="button" href="https://www.ecovilasustentar.eco.br" target="_blank">Wix</a>
+                <a class="button" href="https://trello.com/invite/b/671a90e4e9e8d52b9987a3cc/ATTI90081682b23f494c86ed4ae2b18d492102463DDF/sustentarte-2025" target="_blank">Painel Trello</a>
+            </div>
         </div>
 
         <div class="card">
             <h2>Google Drive - Pastas de Arquivos</h2>
-            <ul class="links">
-                <li><a class="button" href="#" target="_blank">Pasta Fotos Casa Sede</a></li>
-                <li><a class="button" href="#" target="_blank">Pasta Fotos Oficinas</a></li>
-                <li><a class="button" href="#" target="_blank">Pasta Fotos Ecovila</a></li>
-                <li><a class="button" href="#" target="_blank">Pasta Fotos Festivais Anteriores</a></li>
-                <li><a class="button" href="#" target="_blank">Pasta Vídeos Festivais Anteriores</a></li>
-                <li><a class="button" href="#" target="_blank">Pasta Oficinas UMAPAZ</a></li>
-                <li><a class="button" href="#" target="_blank">Pasta Oficinas Agrofloresta</a></li>
-                <li><a class="button" href="#" target="_blank">Pasta Words Textos</a></li>
-            </ul>
+            <div class="button-container">
+                <a class="button" href="#" target="_blank">Pasta Fotos Casa Sede</a>
+                <a class="button" href="#" target="_blank">Pasta Fotos Oficinas</a>
+                <a class="button" href="#" target="_blank">Pasta Fotos Ecovila</a>
+                <a class="button" href="#" target="_blank">Pasta Fotos Festivais Anteriores</a>
+                <a class="button" href="#" target="_blank">Pasta Vídeos Festivais Anteriores</a>
+                <a class="button" href="#" target="_blank">Pasta Oficinas UMAPAZ</a>
+                <a class="button" href="#" target="_blank">Pasta Oficinas Agrofloresta</a>
+                <a class="button" href="#" target="_blank">Pasta Words Textos</a>
+            </div>
         </div>
 
         <div class="card">
             <h2>Links Úteis para a Organização</h2>
-            <ul class="links">
-                <li><a class="button" href="#" target="_blank">Agenda de Eventos</a></li>
-                <li><a class="button" href="#" target="_blank">Planilha de Artistas</a></li>
-                <li><a class="button" href="#" target="_blank">Link Patrocinadores</a></li>
-                <li><a class="button" href="#" target="_blank">Cartas Convites</a></li>
-                <li><a class="button" href="#" target="_blank">Ebooks</a></li>
-                <li><a class="button" href="#" target="_blank">Lista de Participantes</a></li>
-            </ul>
+            <div class="button-container">
+                <a class="button" href="#" target="_blank">Agenda de Eventos</a>
+                <a class="button" href="#" target="_blank">Planilha de Artistas</a>
+                <a class="button" href="#" target="_blank">Link Patrocinadores</a>
+                <a class="button" href="#" target="_blank">Cartas Convites</a>
+                <a class="button" href="#" target="_blank">Ebooks</a>
+                <a class="button" href="#" target="_blank">Lista de Participantes</a>
+            </div>
         </div>
 
         <button class="button" onclick="showMessage()">Clique para mais informações</button>
