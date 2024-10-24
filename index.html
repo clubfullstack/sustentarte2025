@@ -80,6 +80,31 @@
             margin-bottom: 20px;
             color: #666;
         }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -99,6 +124,34 @@
                 <a class="button" href="https://www.ecovilasustentar.eco.br" target="_blank">Wix</a>
                 <a class="button" href="https://trello.com/invite/b/671a90e4e9e8d52b9987a3cc/ATTI90081682b23f494c86ed4ae2b18d492102463DDF/sustentarte-2025" target="_blank">Painel Trello</a>
             </div>
+        </div>
+
+        <div class="card">
+            <h2>Moeda Sustentar</h2>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+                <label for="atividade">Selecione a Atividade:</label>
+                <select id="atividade">
+                    <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                    <option value="Escrita de Conteúdo">Escrita de Conteúdo</option>
+                    <option value="Limpezas">Limpezas</option>
+                    <option value="Artes">Artes</option>
+                    <option value="Fogueira">Fogueira</option>
+                    <option value="Publicação">Publicação</option>
+                    <option value="Artigos">Artigos</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="horas">Horas Trabalhadas:</label>
+                <input type="number" id="horas" placeholder="Digite as horas trabalhadas">
+            </div>
+            <div class="form-group">
+                <button onclick="calcularMoedas()">Calcular Moedas</button>
+            </div>
+            <div class="result" id="resultado"></div>
         </div>
 
         <div class="card">
@@ -137,6 +190,46 @@
     <script>
         function showMessage() {
             alert("Para mais informações, entre em contato conosco pelo email ecovilasustentar@gmail.com!");
+        }
+
+        function calcularMoedas() {
+            const atividade = document.getElementById('atividade').value;
+            const horas = parseFloat(document.getElementById('horas').value);
+            let moedasPorHora = 0;
+
+            // Define as moedas por hora com base na atividade selecionada
+            switch (atividade) {
+                case 'Desenvolvimento Web':
+                    moedasPorHora = 100;
+                    break;
+                case 'Escrita de Conteúdo':
+                    moedasPorHora = 50;
+                    break;
+                case 'Limpezas':
+                    moedasPorHora = 10;
+                    break;
+                case 'Artes':
+                    moedasPorHora = 100;
+                    break;
+                case 'Fogueira':
+                    moedasPorHora = 10;
+                    break;
+                case 'Publicação':
+                    moedasPorHora = 5;
+                    break;
+                case 'Artigos':
+                    moedasPorHora = 500;
+                    break;
+                default:
+                    moedasPorHora = 0;
+            }
+
+            // Calcula o total de moedas
+            const totalMoedas = moedasPorHora * horas;
+
+            // Mostra o resultado
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.textContent = `Olá ${document.getElementById('nome').value}, você ganhou ${totalMoedas} moedas pela atividade de ${atividade} com ${horas} horas de trabalho.`;
         }
     </script>
 </body>
