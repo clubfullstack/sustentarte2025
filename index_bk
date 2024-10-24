@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Organizacional - Festival SustentArte 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        h2 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .button {
+            flex: 1 1 calc(33.333% - 10px);
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .button:active {
+            background-color: #388e3c;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border-radius: 8px;
+        }
+
+        .info {
+            text-align: center;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Painel Organizacional - Festival SustentArte 2025</h1>
+        <p class="info">Acesse todos os conteúdos digitais necessários para a organização do Festival SustentArte 2025 da Ecovila Sustentar.</p>
+
+        <div class="card">
+            <h2>Redes Sociais e Contatos</h2>
+            <div class="button-container">
+                <a class="button" href="https://www.instagram.com/ecovilasustentar" target="_blank">Instagram</a>
+                <a class="button" href="https://www.ecovilasustentar.eco.br" target="_blank">Website</a>
+                <a class="button" href="mailto:ecovilasustentar@gmail.com">Email</a>
+                <a class="button" href="https://linktr.ee/ecovilasustentar" target="_blank">LinkTree</a>
+                <a class="button" href="https://www.facebook.com/sustentabilidade.integral" target="_blank">Facebook</a>
+                <a class="button" href="mailto:ecovilasustentar@gmail.com">Canvas</a>
+                <a class="button" href="https://www.ecovilasustentar.eco.br" target="_blank">Wix</a>
+                <a class="button" href="https://trello.com/invite/b/671a90e4e9e8d52b9987a3cc/ATTI90081682b23f494c86ed4ae2b18d492102463DDF/sustentarte-2025" target="_blank">Painel Trello</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Google Drive - Pastas de Arquivos</h2>
+            <div class="button-container">
+                <a class="button" href="#" target="_blank">Pasta Fotos Casa Sede</a>
+                <a class="button" href="#" target="_blank">Pasta Fotos Oficinas</a>
+                <a class="button" href="#" target="_blank">Pasta Fotos Ecovila</a>
+                <a class="button" href="#" target="_blank">Pasta Fotos Festivais Anteriores</a>
+                <a class="button" href="#" target="_blank">Pasta Vídeos Festivais Anteriores</a>
+                <a class="button" href="#" target="_blank">Pasta Oficinas UMAPAZ</a>
+                <a class="button" href="#" target="_blank">Pasta Oficinas Agrofloresta</a>
+                <a class="button" href="#" target="_blank">Pasta Words Textos</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Links Úteis para a Organização</h2>
+            <div class="button-container">
+                <a class="button" href="#" target="_blank">Agenda de Eventos</a>
+                <a class="button" href="#" target="_blank">Planilha de Artistas</a>
+                <a class="button" href="#" target="_blank">Link Patrocinadores</a>
+                <a class="button" href="#" target="_blank">Cartas Convites</a>
+                <a class="button" href="#" target="_blank">Ebooks</a>
+                <a class="button" href="#" target="_blank">Lista de Participantes</a>
+            </div>
+        </div>
+
+        <button class="button" onclick="showMessage()">Clique para mais informações</button>
+
+        <footer>
+            Todos os direitos reservados © Ecovila Sustentar
+        </footer>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Para mais informações, entre em contato conosco pelo email ecovilasustentar@gmail.com!");
+        }
+    </script>
+</body>
+</html>
